@@ -2,20 +2,26 @@
 
 namespace BoolExp
 {
-  internal class Program
-  {
-    static void Main(string[] args)
+    internal class Program
     {
-      Console.Clear();
-      int apples = 18;
-      int oranges = 9;
-      Console.WriteLine(apples == oranges);
-      Console.WriteLine(apples != oranges);
-      Console.WriteLine($"{apples} > {oranges} is {apples > oranges}");
-      Console.WriteLine($"{apples} < {oranges} is {apples < oranges}");
-      Console.WriteLine($"{apples} >= {oranges} is {apples >= oranges}");
-      Console.WriteLine($"{apples} <= {oranges} is {apples <= oranges}");
-      Console.WriteLine($"{apples} is int is {apples is int}");
+        static void Main(string[] args)
+        {
+            Console.Clear();
+            int apples = 6;
+            int oranges = 9;
+            decimal applePrice = 12.60m;
+            decimal orangesPrice = 4.50m;
+
+            Console.WriteLine(apples == oranges);
+            Console.WriteLine(apples != oranges);
+            Console.WriteLine($"1. {apples} > {oranges} is {apples > oranges}");
+            Console.WriteLine($"2. {apples} < {oranges} is {apples < oranges}");
+            Console.WriteLine($"3. {apples} >= {oranges} is {apples >= oranges}");
+            Console.WriteLine($"4. {apples} <= {oranges} is {apples <= oranges}");
+            Console.WriteLine($"5. {apples} is int is {apples is int}");
+
+            Console.WriteLine($"A) Reducing apple cost: {(apples > oranges) && (applePrice > orangesPrice)}");
+            Console.WriteLine($"B) Reducing apple cost: {(apples > oranges) || (applePrice > orangesPrice)}");
         }
-  }
+    }
 }
